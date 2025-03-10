@@ -33,11 +33,11 @@
 ```bash
 pip command: pip install -r requirements.txt
 conda command: conda env create -f environment.yml
+```
 
 ## For Mac Users
-
 由于 Mac 用户无法访问较低版本的 Python（<=3.9），因此需要访问 issue 文件 #381 以成功部署 spinningup：[https://github.com/openai/spinningup/pull/381](https://github.com/openai/spinningup/pull/381)
-
+```bash
 git clone https://github.com/openai/spinningup.git
 cd spinningup
 git fetch origin pull/381/head:2023Jan_dependency_upgrades
@@ -49,17 +49,24 @@ brew install freetype
 pip install pyglet==1.5.15
 pip install tensorflow-macos
 pip install tensorflow-metal
-
+```
 替换 setup.py 中的 tensorflow>=1.8.0,<3.0 为：
+```bash
 'tensorflow>=1.8.0,<3.0; sys_platform != "darwin" or platform_machine != "arm64"',
 'tensorflow-macos>=1.8.0,<3.0; sys_platform == "darwin" and platform_machine == "arm64"',
-
+```
 最后运行安装命令：
+```bash
 pip install -e .
+```
 
 注意：如果使用该设置，需要额外更改 spinningup setup.py 中的 matplotlib==3.5.0rc1，并在手动安装成功后卸载并安装稳定版本：
+```bash
 pip install matplotlib==3.3.4
+```
 手动安装方式为：
+```bash
 gh repo clone openai/spinningup | or pip install https://github.com/openai/spinningup.git
 cd spinningup
 pip install -e .
+```
