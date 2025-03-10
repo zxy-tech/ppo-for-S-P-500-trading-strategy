@@ -1,0 +1,26 @@
+# ***************************************************************************************
+# This is the User Defined Settings file which controls the complete execution
+# ***************************************************************************************
+
+# Stock settings
+sp500:    SPY
+tickers: [GOOGL, AAPL, AMZN, BA, C, INTC, JPM, MSFT, NVDA, WFC]
+#tickers:  [AMZN, NVDA, AAPL, MSFT, NFLX, MU, GOOGL, BAC, GE, JPM, INTC, BA, RHT, C, CSCO, T, WFC, ADBE, XOM, PCLN]
+prices_file: SFFRL_data/price.csv
+signals_file: SFFRL_data/signals.csv
+gain_file: SFFRL_data/gain.csv
+
+sff_price: SFF_data/sffprices.csv
+sff_signal: SFF_data/sffsignals.csv
+sff_gain: SFF_data/sffgain.csv
+
+arima_signal: ARIMA_data/arima_obs.csv
+
+intpricesfile: original_data/prices2024_yf.csv
+intreturnsfile: original_data/returns2024_yf.csv
+
+model_path: ./output/pyt_save/model.pt
+#model_path: ./path/to/output_dir/pyt_save/model.pt
+# data_start:    2007-01-04
+# data_end:      2018-01-01
+# training_end:  2010-12-31
